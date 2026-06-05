@@ -1,102 +1,166 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Hayes Content Platform</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="favicon.png">
+<title>Luca Hayes Content Platform</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #05070A;
-            color: white;
-            text-align: center;
-        }
+<link rel="icon" type="image/png" href="favicon.png">
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .logo {
-            width: 220px;
-            margin-bottom: 30px;
-        }
+<style>
 
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .subtitle {
-            color: #4FC3FF;
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
+body{
+    background:#05070A;
+    color:#FFFFFF;
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        p {
-            color: #B8C2CC;
-            line-height: 1.7;
-            font-size: 18px;
-            max-width: 650px;
-            margin: auto;
-        }
+.container{
+    width:100%;
+    max-width:900px;
+    padding:40px;
+    text-align:center;
+}
 
-        .links {
-            margin-top: 50px;
-        }
+.logo{
+    width:260px;
+    max-width:80%;
+    margin-bottom:30px;
+}
 
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 14px 24px;
-            text-decoration: none;
-            color: white;
-            border: 1px solid #00A8FF;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+h1{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#FFFFFF;
+}
 
-        .links a:hover {
-            background: #00A8FF;
-        }
+.subtitle{
+    color:#B8C2CC;
+    font-size:18px;
+    line-height:1.7;
+    max-width:700px;
+    margin:0 auto 40px auto;
+}
 
-        footer {
-            margin-top: 80px;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+.tiktok-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 30px;
+    border:none;
+    border-radius:12px;
+    background:#000000;
+    color:#FFFFFF;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:none;
+    transition:all .25s ease;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.tiktok-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 25px rgba(0,168,255,.35);
+}
+
+.tiktok-btn i{
+    font-size:22px;
+}
+
+.footer{
+    margin-top:60px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.footer a{
+    color:#4FC3FF;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+
+.status{
+    margin-top:25px;
+    color:#7D8B99;
+    font-size:14px;
+}
+
+.glow{
+    margin:40px auto;
+    width:220px;
+    height:2px;
+    background:#00A8FF;
+    box-shadow:0 0 20px #00A8FF;
+}
+
+</style>
+
 </head>
+
 <body>
 
 <div class="container">
 
-    <img src="logo.png" alt="Luca Hayes Content Platform" class="logo">
+```
+<img src="logo.png"
+     alt="Luca Hayes Content Platform"
+     class="logo">
 
-    <h1>Luca Hayes Content Platform</h1>
+<h1>Luca Hayes Content Platform</h1>
 
-    <div class="subtitle">
-        Creator Productivity Platform
-    </div>
+<p class="subtitle">
+    Connect your TikTok account to securely manage,
+    upload and publish original short-form content
+    through the Luca Hayes Content Platform.
+</p>
 
-    <p>
-        Create, organize and publish original short-form content.
-        Manage content workflows and publishing across social media platforms.
-    </p>
+<div class="glow"></div>
 
-    <div class="links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-    </div>
+<!-- ERSÄTT MED DIN RIKTIGA TIKTOK AUTH URL -->
+<a class="tiktok-btn"
+   href="TIKTOK_AUTH_URL">
 
-    <footer>
-        © 2025 Luca Hayes Content Platform
-    </footer>
+    <i class="fa-brands fa-tiktok"></i>
+    Connect with TikTok
+
+</a>
+
+<div class="status">
+    Secure OAuth authentication powered by TikTok.
+</div>
+
+<div class="footer">
+
+    <a href="privacy-policy.html">
+        Privacy Policy
+    </a>
+
+    <a href="terms-of-service.html">
+        Terms of Service
+    </a>
+
+</div>
+```
 
 </div>
 
