@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,76 +11,137 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    min-height:100vh;
-    background:#05070d;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
+min-height:100vh;
+background:
+radial-gradient(circle at center, rgba(0,180,255,0.12) 0%, rgba(0,0,0,0) 50%),
+#05070d;
+
+font-family:Segoe UI, Arial, sans-serif;
+color:white;
+
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background-image:
+radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+background-size:35px 35px;
+opacity:0.08;
+pointer-events:none;
 }
 
 .container{
-    text-align:center;
-    max-width:700px;
-    padding:40px;
+max-width:900px;
+width:100%;
+padding:40px;
+text-align:center;
 }
 
 .logo{
-    width:220px;
-    margin-bottom:25px;
+width:220px;
+max-width:80%;
+margin-bottom:30px;
+
+filter:
+drop-shadow(0 0 10px rgba(0,212,255,.5))
+drop-shadow(0 0 20px rgba(0,212,255,.3));
 }
 
 h1{
-    color:#7fe6ff;
-    margin-bottom:15px;
+font-size:3rem;
+font-weight:700;
+margin-bottom:20px;
+
+color:#9ef3ff;
+
+text-shadow:
+0 0 15px rgba(0,212,255,.8),
+0 0 35px rgba(0,212,255,.4);
 }
 
-p{
-    color:#c7d4df;
-    line-height:1.6;
-    margin-bottom:35px;
+.subtitle{
+font-size:1.2rem;
+line-height:1.7;
+color:#d5e7ef;
+max-width:750px;
+margin:0 auto 50px auto;
 }
 
-.tiktok-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
+.tiktok-button{
 
-    background:#000;
-    color:white;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:16px;
 
-    text-decoration:none;
+padding:20px 34px;
 
-    padding:16px 28px;
+background:#ffffff;
+color:#000000;
 
-    border-radius:12px;
+text-decoration:none;
+font-size:22px;
+font-weight:700;
 
-    border:1px solid #00d4ff;
+border-radius:16px;
 
-    font-size:18px;
-    font-weight:bold;
+box-shadow:
+0 0 15px rgba(255,255,255,.15),
+0 0 25px rgba(0,212,255,.25);
 
-    transition:0.3s;
+transition:.25s ease;
 }
 
-.tiktok-btn:hover{
-    box-shadow:0 0 25px #00d4ff;
-    transform:translateY(-2px);
+.tiktok-button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 25px rgba(255,255,255,.25),
+0 0 45px rgba(0,212,255,.45);
+}
+
+.tiktok-icon{
+width:42px;
+height:42px;
+}
+
+.links{
+margin-top:50px;
+}
+
+.links a{
+color:#8fe9ff;
+text-decoration:none;
+font-weight:600;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+.separator{
+margin:0 12px;
+color:#6f8590;
 }
 
 .footer{
-    margin-top:40px;
-    font-size:13px;
-    color:#7a8a96;
-}
-
-.footer a{
-    color:#7fe6ff;
-    text-decoration:none;
+margin-top:40px;
+color:#8398a5;
+font-size:14px;
 }
 
 </style>
@@ -90,31 +152,39 @@ p{
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="Luca Hayes">
 
 <h1>Luca Hayes Content Platform</h1>
 
-<p>
+<p class="subtitle">
 Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
 </p>
 
-<a class="tiktok-btn"
+<a
+class="tiktok-button"
 href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&response_type=code&scope=user.info.basic,video.upload,video.publish&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=luca_hayes_platform">
 
-🎵 Connect with TikTok
+<img
+class="tiktok-icon"
+src="https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png"
+alt="TikTok">
+
+<span>Connect with TikTok</span>
 
 </a>
 
-<div class="footer">
-
-<p>
+<div class="links">
 
 <a href="privacy-policy.html">Privacy Policy</a>
-|
+
+<span class="separator">|</span>
+
 <a href="terms-of-service.html">Terms of Service</a>
 
-</p>
+</div>
 
+<div class="footer">
+Luca Hayes Content Platform © 2025
 </div>
 
 </div>
