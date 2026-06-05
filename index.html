@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,130 +18,130 @@ box-sizing:border-box;
 }
 
 body{
+font-family:Arial, Helvetica, sans-serif;
+background:#05070A;
+color:#FFFFFF;
 min-height:100vh;
-background:
-radial-gradient(circle at center, rgba(0,180,255,0.12) 0%, rgba(0,0,0,0) 50%),
-#05070d;
-
-font-family:Segoe UI, Arial, sans-serif;
-color:white;
-
 display:flex;
 justify-content:center;
 align-items:center;
-overflow:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background-image:
-radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
-background-size:35px 35px;
-opacity:0.08;
-pointer-events:none;
+padding:20px;
 }
 
 .container{
-max-width:900px;
+max-width:850px;
 width:100%;
-padding:40px;
 text-align:center;
+padding:40px 20px;
 }
 
 .logo{
-width:220px;
+width:160px;
 max-width:80%;
-margin-bottom:30px;
-
-filter:
-drop-shadow(0 0 10px rgba(0,212,255,.5))
-drop-shadow(0 0 20px rgba(0,212,255,.3));
+margin-bottom:20px;
 }
 
 h1{
-font-size:3rem;
+font-size:2.1rem;
 font-weight:700;
-margin-bottom:20px;
-
-color:#9ef3ff;
-
-text-shadow:
-0 0 15px rgba(0,212,255,.8),
-0 0 35px rgba(0,212,255,.4);
+color:#9EEBFF;
+margin-bottom:18px;
 }
 
-.subtitle{
-font-size:1.2rem;
+.description{
+max-width:700px;
+margin:0 auto 35px auto;
+font-size:1.05rem;
 line-height:1.7;
-color:#d5e7ef;
-max-width:750px;
-margin:0 auto 50px auto;
+color:#D7E4EC;
 }
 
-.tiktok-button{
+.login-button{
 
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:16px;
+gap:14px;
 
-padding:20px 34px;
+background:#FFFFFF;
+color:#111111;
 
-background:#ffffff;
-color:#000000;
+padding:16px 30px;
 
-text-decoration:none;
-font-size:22px;
+border-radius:12px;
+
+font-size:1.1rem;
 font-weight:700;
 
-border-radius:16px;
-
-box-shadow:
-0 0 15px rgba(255,255,255,.15),
-0 0 25px rgba(0,212,255,.25);
+text-decoration:none;
 
 transition:.25s ease;
+
+box-shadow:
+0 0 10px rgba(0,168,255,.15);
+
 }
 
-.tiktok-button:hover{
+.login-button:hover{
 
 transform:translateY(-2px);
 
 box-shadow:
-0 0 25px rgba(255,255,255,.25),
-0 0 45px rgba(0,212,255,.45);
+0 0 18px rgba(0,168,255,.25);
+
 }
 
 .tiktok-icon{
-width:42px;
-height:42px;
+width:32px;
+height:32px;
 }
 
-.links{
-margin-top:50px;
+.note{
+margin-top:16px;
+font-size:.9rem;
+color:#9BAAB5;
 }
 
-.links a{
-color:#8fe9ff;
+.footer-links{
+margin-top:40px;
+}
+
+.footer-links a{
+color:#8FE9FF;
 text-decoration:none;
-font-weight:600;
+margin:0 10px;
+font-size:.95rem;
 }
 
-.links a:hover{
+.footer-links a:hover{
 text-decoration:underline;
 }
 
-.separator{
-margin:0 12px;
-color:#6f8590;
+.footer{
+margin-top:30px;
+font-size:.85rem;
+color:#72808C;
 }
 
-.footer{
-margin-top:40px;
-color:#8398a5;
-font-size:14px;
+@media(max-width:768px){
+
+.logo{
+width:130px;
+}
+
+h1{
+font-size:1.8rem;
+}
+
+.description{
+font-size:1rem;
+}
+
+.login-button{
+font-size:1rem;
+padding:14px 24px;
+}
+
 }
 
 </style>
@@ -152,39 +152,51 @@ font-size:14px;
 
 <div class="container">
 
-<img src="logo.png" class="logo" alt="Luca Hayes">
+<img
+src="logo.png"
+alt="Luca Hayes Content Platform"
+class="logo">
 
 <h1>Luca Hayes Content Platform</h1>
 
-<p class="subtitle">
+<p class="description">
 Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
 </p>
 
 <a
-class="tiktok-button"
-href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&response_type=code&scope=user.info.basic,video.upload,video.publish&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=luca_hayes_platform">
+class="login-button"
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes">
 
 <img
 class="tiktok-icon"
 src="https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png"
-alt="TikTok">
+alt="TikTok"
+loading="eager">
 
 <span>Connect with TikTok</span>
 
 </a>
 
-<div class="links">
+<div class="note">
+Secure authentication powered by TikTok OAuth
+</div>
 
-<a href="privacy-policy.html">Privacy Policy</a>
+<div class="footer-links">
 
-<span class="separator">|</span>
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
 
-<a href="terms-of-service.html">Terms of Service</a>
+|
+
+<a href="terms-of-service.html">
+Terms of Service
+</a>
 
 </div>
 
 <div class="footer">
-Luca Hayes Content Platform © 2025
+© 2025 Luca Hayes Content Platform
 </div>
 
 </div>
