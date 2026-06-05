@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,108 +8,78 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    background:#05070A;
-    color:#FFFFFF;
-    font-family:Arial,sans-serif;
+    margin:0;
     min-height:100vh;
+    background:#05070d;
+    font-family:Arial,sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
+    color:white;
 }
 
 .container{
-    width:100%;
-    max-width:900px;
-    padding:40px;
     text-align:center;
+    max-width:700px;
+    padding:40px;
 }
 
 .logo{
-    width:260px;
-    max-width:80%;
-    margin-bottom:30px;
+    width:220px;
+    margin-bottom:25px;
 }
 
 h1{
-    font-size:42px;
+    color:#7fe6ff;
     margin-bottom:15px;
-    color:#FFFFFF;
 }
 
-.subtitle{
-    color:#B8C2CC;
-    font-size:18px;
-    line-height:1.7;
-    max-width:700px;
-    margin:0 auto 40px auto;
+p{
+    color:#c7d4df;
+    line-height:1.6;
+    margin-bottom:35px;
 }
 
 .tiktok-btn{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     gap:12px;
-    padding:16px 30px;
-    border:none;
-    border-radius:12px;
-    background:#000000;
-    color:#FFFFFF;
-    font-size:18px;
-    font-weight:600;
-    cursor:pointer;
+
+    background:#000;
+    color:white;
+
     text-decoration:none;
-    transition:all .25s ease;
-    border:1px solid rgba(255,255,255,.15);
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    border:1px solid #00d4ff;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:0.3s;
 }
 
 .tiktok-btn:hover{
+    box-shadow:0 0 25px #00d4ff;
     transform:translateY(-2px);
-    box-shadow:0 0 25px rgba(0,168,255,.35);
-}
-
-.tiktok-btn i{
-    font-size:22px;
 }
 
 .footer{
-    margin-top:60px;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+    margin-top:40px;
+    font-size:13px;
+    color:#7a8a96;
 }
 
 .footer a{
-    color:#4FC3FF;
+    color:#7fe6ff;
     text-decoration:none;
-}
-
-.footer a:hover{
-    text-decoration:underline;
-}
-
-.status{
-    margin-top:25px;
-    color:#7D8B99;
-    font-size:14px;
-}
-
-.glow{
-    margin:40px auto;
-    width:220px;
-    height:2px;
-    background:#00A8FF;
-    box-shadow:0 0 20px #00A8FF;
 }
 
 </style>
@@ -121,46 +90,32 @@ h1{
 
 <div class="container">
 
-```
-<img src="logo.png"
-     alt="Luca Hayes Content Platform"
-     class="logo">
+<img src="logo.png" class="logo">
 
 <h1>Luca Hayes Content Platform</h1>
 
-<p class="subtitle">
-    Connect your TikTok account to securely manage,
-    upload and publish original short-form content
-    through the Luca Hayes Content Platform.
+<p>
+Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
 </p>
 
-<div class="glow"></div>
-
-<!-- ERSÄTT MED DIN RIKTIGA TIKTOK AUTH URL -->
 <a class="tiktok-btn"
-   href="TIKTOK_AUTH_URL">
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&response_type=code&scope=user.info.basic,video.upload,video.publish&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=luca_hayes_platform">
 
-    <i class="fa-brands fa-tiktok"></i>
-    Connect with TikTok
+🎵 Connect with TikTok
 
 </a>
 
-<div class="status">
-    Secure OAuth authentication powered by TikTok.
-</div>
-
 <div class="footer">
 
-    <a href="privacy-policy.html">
-        Privacy Policy
-    </a>
+<p>
 
-    <a href="terms-of-service.html">
-        Terms of Service
-    </a>
+<a href="privacy-policy.html">Privacy Policy</a>
+|
+<a href="terms-of-service.html">Terms of Service</a>
+
+</p>
 
 </div>
-```
 
 </div>
 
