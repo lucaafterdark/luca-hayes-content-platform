@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Deletion Request | Luca Hayes Content Platform</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body{
+    margin:0;
+    background:#05070A;
+    color:#FFFFFF;
+    font-family:Arial,sans-serif;
+    line-height:1.7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:50px 25px;
+}
+
+.logo{
+    width:180px;
+    display:block;
+    margin:0 auto 30px;
+}
+
+h1,h2{
+    color:#4FC3FF;
+}
+
+p,li{
+    color:#D7DCE1;
+}
+
+a{
+    color:#4FC3FF;
+}
+
+.footer{
+    margin-top:50px;
+    text-align:center;
+    color:#888;
+}
+
+.box{
+    background:#0D1420;
+    border:1px solid rgba(79,195,255,0.15);
+    border-radius:12px;
+    padding:20px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo" alt="Luca Hayes Content Platform">
+
+<h1>Data Deletion Request</h1>
+
+<p>Last Updated: June 2025</p>
+
+<p>
+Luca Hayes Content Platform respects your privacy and provides users with the ability to request deletion of their account data.
+</p>
+
+<h2>How to Request Data Deletion</h2>
+
+<p>
+If you would like your account data removed from Luca Hayes Content Platform, please send a request to:
+</p>
+
+<div class="box">
+<strong>Email:</strong><br>
+lucaafterdarkmusic@gmail.com
+</div>
+
+<h2>Information to Include</h2>
+
+<ul>
+<li>Your TikTok username (if applicable)</li>
+<li>The email address associated with your request</li>
+<li>A statement requesting account and data deletion</li>
+</ul>
+
+<h2>What Happens Next</h2>
+
+<p>
+After receiving your request, we will review and process the deletion request within a reasonable period of time.
+</p>
+
+<p>
+Account-related information stored by Luca Hayes Content Platform will be removed where applicable, except where retention is required for legal, security or operational purposes.
+</p>
+
+<h2>Third-Party Services</h2>
+
+<p>
+If you connected a TikTok account to Luca Hayes Content Platform, you may also manage permissions directly through your TikTok account settings.
+</p>
+
+<h2>Contact</h2>
+
+<p>
+For questions regarding data deletion requests, please contact:
+<br><br>
+lucaafterdarkmusic@gmail.com
+</p>
+
+<p>
+<a href="index.html">Back to Home</a>
+</p>
+
+<div class="footer">
+© 2025 Luca Hayes Content Platform
+</div>
+
+</div>
+
+</body>
+</html>
