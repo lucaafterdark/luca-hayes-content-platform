@@ -1,204 +1,234 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
+<html lang="sv">
+<huvud>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=enhetsbredd, initial-skal=1.0">
+<title>Luca Hayes innehållsplattform</title>
+<länk rel="ikon" type="bild/png" href="favicon.png">
 
-<title>Luca Hayes Content Platform</title>
-
-<link rel="icon" type="image/png" href="favicon.png">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+<stil>
+* {
+marginal: 0;
+utfyllnad: 0;
+box-storleksanpassning: border-box;
 }
 
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:#05070A;
-color:#FFFFFF;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
+kropp
+typsnittsfamilj: Arial, Helvetica, sans-serif;
+bakgrund: #08111d;
+färg: #FFFFFF;
+min-höjd: 100vh;
+skärm: flex;
+flexriktning: kolumn;
+justify-content: centrera;
+justera-objekt: centrera;
+utfyllnad: 40px 20px;
 }
 
-.container{
-max-width:850px;
-width:100%;
-text-align:center;
-padding:40px 20px;
+.behållare {
+maxbredd: 900px;
+bredd: 100 %;
+text-justera: centrera;
 }
 
-.logo{
-width:160px;
-max-width:80%;
-margin-bottom:20px;
+.logotyp {
+bredd: 140px;
+maxbredd: 80 %;
+marginal-nedre: 25px;
 }
 
-h1{
-font-size:2.1rem;
-font-weight:700;
-color:#9EEBFF;
-margin-bottom:18px;
+.hjälte-kort {
+bakgrund: #111b28;
+utfyllnad: 50px 40px;
+kantradius: 24px;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+marginal-nedre: 30px;
 }
 
-.description{
-max-width:700px;
-margin:0 auto 35px auto;
-font-size:1.05rem;
-line-height:1.7;
-color:#D7E4EC;
+h1 {
+teckenstorlek: 2.5rem;
+teckenstorlek: 700;
+färg: #5ff5ff;
+marginal-nedre: 15px;
+bokstavsavstånd: -0,5px;
 }
 
-.login-button{
-
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:14px;
-
-background:#FFFFFF;
-color:#111111;
-
-padding:16px 30px;
-
-border-radius:12px;
-
-font-size:1.1rem;
-font-weight:700;
-
-text-decoration:none;
-
-transition:.25s ease;
-
-box-shadow:
-0 0 10px rgba(0,168,255,.15);
-
+.undertext {
+teckenstorlek: 1.2rem;
+färg: #a5b4fc;
+marginal-nedre: 25px;
+teckenstorlek: 500;
 }
 
-.login-button:hover{
-
-transform:translateY(-2px);
-
-box-shadow:
-0 0 18px rgba(0,168,255,.25);
-
+.beskrivning {
+maxbredd: 680px;
+marginal: 0 auto 40px auto;
+teckenstorlek: 1.05rem;
+radhöjd: 1,6;
+färg: #cdffff;
+opacitet: 0,9;
 }
 
-.tiktok-icon{
-width:32px;
-height:32px;
+.inloggningsknapp {
+skärm: inline-flex;
+justera-objekt: centrera;
+justify-content: centrera;
+mellanrum: 14px;
+bakgrund: #FFFFFF;
+färg: #111111;
+utfyllnad: 18px 36px;
+kantradius: 14px;
+teckenstorlek: 1,15 rem;
+teckenstorlek: 700;
+textdekoration: ingen;
+övergång: transformera 0,25s lätthet, box-shadow 0,25s lätthet;
+box-shadow: 0 4px 15px rgba(95, 245, 255, 0.2);
 }
 
-.note{
-margin-top:16px;
-font-size:.9rem;
-color:#9BAAB5;
+.inloggningsknapp:hover {
+transformera: translateY(-3px);
+box-shadow: 0 8px 25px rgba(95, 245, 255, 0.4);
 }
 
-.footer-links{
-margin-top:40px;
+.tiktok-ikon {
+bredd: 28px;
+höjd: 28px;
 }
 
-.footer-links a{
-color:#8FE9FF;
-text-decoration:none;
-margin:0 10px;
-font-size:.95rem;
+.säkerhetsanmärkning {
+marginal-topp: 20px;
+teckenstorlek: 0.9rem;
+färg: #64748b;
+skärm: flex;
+justera-objekt: centrera;
+justify-content: centrera;
+mellanrum: 6px;
 }
 
-.footer-links a:hover{
-text-decoration:underline;
+/* Feature Section som visar plattformens legitimitet för TikTok */
+.funktioner-rutnät {
+visning: rutnät;
+grid-mall-kolumner: repeat(3, 15fr);
+mellanrum: 20px;
+marginal-topp: 20px;
+textjustering: vänster;
 }
 
-.footer{
-margin-top:30px;
-font-size:.85rem;
-color:#72808C;
+@media(maxbredd: 768px) {
+.funktioner-rutnät {
+grid-mall-kolumner: 1fr;
+}
 }
 
-@media(max-width:768px){
-
-.logo{
-width:130px;
+.feature-box {
+bakgrund: #0c1520;
+utfyllnad: 25px;
+kantradius: 16px;
+kantlinje: 1px heldragen #1e293b;
 }
 
-h1{
-font-size:1.8rem;
+.feature-box h3 {
+färg: #5ff5ff;
+fontstorlek: 1.1rem;
+marginal-nedre: 10px;
 }
 
-.description{
-font-size:1rem;
+.feature-box p {
+färg: #94a3b8;
+teckenstorlek: 0,95 rem;
+radhöjd: 1,5;
 }
 
-.login-button{
-font-size:1rem;
-padding:14px 24px;
+.footer-länkar {
+marginal-topp: 50px;
 }
 
+.footer-länkar a {
+färg: #5ff5ff;
+textdekoration: ingen;
+marginal: 0 12px;
+teckenstorlek: 0,95 rem;
+övergång: opacitet 0,2s;
 }
 
-</style>
+.footer-länkar a:hover {
+textdekoration: understrykning;
+opacitet: 0,9;
+}
 
-</head>
+.avdelare {
+färg: #334155;
+}
 
-<body>
+.sidfot {
+marginal-topp: 20px;
+teckenstorlek: 0,85 rem;
+färg: #64748b;
+}
 
-<div class="container">
+@media(maxbredd: 768px) {
+.hjälte-kort {
+utfyllnad: 35px 20px;
+}
+h1 {
+fontstorlek: 2rem;
+}
+.beskrivning {
+fontstorlek: 1rem;
+}
+.inloggningsknapp {
+fontstorlek: 1rem;
+utfyllnad: 16px 28px;
+bredd: 100 %;
+}
+}
+</stil>
+</huvud>
+<kropp>
 
-<img
-src="logo.png"
-alt="Luca Hayes Content Platform"
-class="logo">
-
-<h1>Luca Hayes Content Platform</h1>
-
-<p class="description">
-Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
+<div class="behållare">
+<div class="hjältekort">
+<img src="logo.png" alt="Luca Hayes innehållsplattform" class="logo">
+<h1>Luca Hayes innehållsplattform</h1>
+<p class="subtitle">Nästa generationens TikTok-skaparhantering</p>
+<p class="beskrivning">
+Ett avancerat företagsekosystem skräddarsytt för professionella kreatörer. Effektivisera ditt innehållsarbetsflöde, verifiera kontobehörighetsparametrar och hantera din mediepubliceringslivscykel säkert direkt via TikToks officiella öppna API-infrastruktur.
 </p>
 
-<a
-class="login-button"
-href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes">
-
-<img
-class="tiktok-icon"
-src="https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png"
-alt="TikTok"
-loading="eager">
-
-<span>Connect with TikTok</span>
-
+https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes
+<img class="tiktok-ikon" src=" https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png " alt="TikTok" laddar="ivrig">
+<span>Anslut till TikTok-skaparkonto</span>
 </a>
 
-<div class="note">
-Secure authentication powered by TikTok OAuth
+<div class="säkerhetsanmärkning">
+🔒 Säker, krypterad autentisering som drivs helt av TikTok OAuth 2.0.
+</div>
 </div>
 
-<div class="footer-links">
-
-<a href="privacy-policy.html">
-Privacy Policy
-</a>
-
-|
-
-<a href="terms-of-service.html">
-Terms of Service
-</a>
-
+<div class="funktionsrutnät">
+<div class="funktionsruta">
+<h3>Automatisk verifiering</h3>
+<p>Hämta och granska skaparparametrar på serversidan direkt och säkert, inklusive publiceringsgränser, tidsbegränsningar och konfigurationer för smeknamnsidentitet.</p>
+</div>
+<div class="funktionsruta">
+<h3>Verktyg för policyefterlevnad</h3>
+<p>Inbyggda brytare för kommersiellt innehållsavslöjande för varumärkes- och marknadsföringsinnehåll för att säkerställa felfri efterlevnad av juridiska ramar.</p>
+</div>
+<div class="funktionsruta">
+<h3>Säker livscykelavsökning</h3>
+<p>Spåra ditt innehållsutskick säkert i realtid. Transparenta indikatorer för bearbetningsstatus förhindrar oavsiktlig dubbelpublicering eller fel.</p>
+</div>
 </div>
 
-<div class="footer">
-© 2025 Luca Hayes Content Platform
+<div class="sidfot-länkar">
+<a href="privacy-policy.html">Integritetspolicy</a>
+<span class="divider">|</span>
+<a href="terms-of-service.html">Användarvillkor</a>
 </div>
 
+<div class="sidfot">
+© 2026 Luca Hayes Content Platform. Alla rättigheter förbehållna. Byggd i strikt enlighet med TikTok Open Platform Developer Terms.
+</div>
 </div>
 
 </body>
