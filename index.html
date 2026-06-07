@@ -7,6 +7,19 @@
 <länk rel="ikon" type="bild/png" href="favicon.png">
 
 <stil>
+:rot {
+--bg-main: #030712;
+--bg-kort: #0b1329;
+--bg-kort-hover: #111c3a;
+--accent: #5ff5ff;
+--accent-glöd: rgba(95, 245, 255, 0.15);
+--text-primär: #f9fafb;
+--text-sekundär: #9ca3af;
+--text-avstängd: #6b7280;
+--border: rgba(255, 255, 255, 0,05);
+--border-active: rgba(95, 245, 255, 0.2);
+}
+
 * {
 marginal: 0;
 utfyllnad: 0;
@@ -14,222 +27,309 @@ box-storleksanpassning: border-box;
 }
 
 kropp
-typsnittsfamilj: Arial, Helvetica, sans-serif;
-bakgrund: #08111d;
-färg: #FFFFFF;
+typsnittsfamilj: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+bakgrundsfärg: var(--bg-main);
+bakgrundsbild:
+radial-gradient(cirkel vid 50% 0%, #0f2042 0%, transparent 50%),
+radial-gradient(cirkel vid 0% 100%, #050b18 0%, transparent 40%);
+bakgrundsbilaga: fixad;
+färg: var(--text-primär);
 min-höjd: 100vh;
 skärm: flex;
 flexriktning: kolumn;
-justify-content: centrera;
 justera-objekt: centrera;
-utfyllnad: 40px 20px;
+justify-content: mellanslag;
+utfyllnad: 20px;
+-webkit-font-smoothing: kantutjämnad;
 }
 
-.behållare {
-maxbredd: 900px;
+/* Toppmeny / Rubrik */
+rubrik {
+bredd: 100 %;
+maxbredd: 1100px;
+skärm: flex;
+justify-content: mellanslag;
+justera-objekt: centrera;
+utfyllnad: 20px 10px;
+}
+
+.varumärke {
+skärm: flex;
+justera-objekt: centrera;
+mellanrum: 12px;
+}
+
+.header-logotyp {
+bredd: 34px;
+höjd: 34px;
+objektanpassning: innehålla;
+}
+
+.varumärke {
+fontstorlek: 1rem;
+teckenstorlek: 600;
+bokstavsavstånd: -0,3px;
+färg: var(--text-primär);
+}
+
+.status-märke {
+skärm: flex;
+justera-objekt: centrera;
+mellanrum: 8px;
+bakgrund: rgba(16, 185, 129, 0.1);
+kantlinje: 1px solid rgba(16, 185, 129, 0.2);
+utfyllnad: 6px 12px;
+kantradius: 99px;
+teckenstorlek: 0.8rem;
+teckenstorlek: 500;
+färg: #34d399;
+}
+
+.status-punkt {
+bredd: 6px;
+höjd: 6px;
+bakgrundsfärg: #10b981;
+gränsradie: 50 %;
+box-shadow: 0 0 8px #10b981;
+}
+
+/* Huvud / Hjälteavsnitt */
+.huvudinnehåll {
+maxbredd: 800px;
 bredd: 100 %;
 text-justera: centrera;
-}
-
-.logotyp {
-bredd: 140px;
-maxbredd: 80 %;
-marginal-nedre: 25px;
-}
-
-.hjälte-kort {
-bakgrund: #111b28;
-utfyllnad: 50px 40px;
-kantradius: 24px;
-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-marginal-nedre: 30px;
+marginal: 60px 0;
 }
 
 h1 {
-teckenstorlek: 2.5rem;
-teckenstorlek: 700;
-färg: #5ff5ff;
-marginal-nedre: 15px;
-bokstavsavstånd: -0,5px;
-}
-
-.undertext {
-teckenstorlek: 1.2rem;
-färg: #a5b4fc;
-marginal-nedre: 25px;
-teckenstorlek: 500;
+teckenstorlek: 3.2rem;
+teckenstorlek: 800;
+radhöjd: 1,15;
+bokstavsavstånd: -1,5px;
+marginal-nedre: 24px;
+bakgrund: linjär-gradient(135 grader, #ffffff 0 %, #93c5fd 50 %, #5ff5ff 100 %);
+-webkit-bakgrundsklipp: text;
+-webkit-text-fyllningsfärg: transparent;
 }
 
 .beskrivning {
-maxbredd: 680px;
-marginal: 0 auto 40px auto;
-teckenstorlek: 1.05rem;
+teckenstorlek: 1.2rem;
 radhöjd: 1,6;
-färg: #cdffff;
-opacitet: 0,9;
+färg: #9cb3c9;
+maxbredd: 640px;
+marginal: 0 auto 40px auto;
+teckenstorlek: 400;
 }
 
+/* Premium OAuth-knapp */
 .inloggningsknapp {
 skärm: inline-flex;
 justera-objekt: centrera;
 justify-content: centrera;
 mellanrum: 14px;
-bakgrund: #FFFFFF;
-färg: #111111;
-utfyllnad: 18px 36px;
+bakgrund: #ffffff;
+färg: #000000;
+utfyllnad: 16px 36px;
 kantradius: 14px;
-teckenstorlek: 1,15 rem;
-teckenstorlek: 700;
+teckenstorlek: 1.05rem;
+teckenstorlek: 600;
 textdekoration: ingen;
-övergång: transformera 0,25s lätthet, box-shadow 0,25s lätthet;
-box-shadow: 0 4px 15px rgba(95, 245, 255, 0.2);
+övergång: alla 0,2s kubisk-bezier(0,16, 1, 0,3, 1);
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .inloggningsknapp:hover {
-transformera: translateY(-3px);
-box-shadow: 0 8px 25px rgba(95, 245, 255, 0.4);
+transformera: translateY(-2px);
+bakgrund: #f3f4f6;
+box-shadow: 0 12px 30px rgba(95, 245, 255, 0.25), 0 0 0 1px var(--accent);
 }
 
 .tiktok-ikon {
-bredd: 28px;
-höjd: 28px;
+bredd: 24px;
+höjd: 24px;
 }
 
-.säkerhetsanmärkning {
-marginal-topp: 20px;
-teckenstorlek: 0.9rem;
-färg: #64748b;
-skärm: flex;
-justera-objekt: centrera;
-justify-content: centrera;
-mellanrum: 6px;
+.säkerhetstext {
+marginal-topp: 18px;
+teckenstorlek: 0,85 rem;
+färg: var(--text-dämpad);
 }
 
-/* Feature Section som visar plattformens legitimitet för TikTok */
+/* Grid-sektion för funktioner */
+.features-behållare {
+bredd: 100 %;
+maxbredd: 1100px;
+marginal-topp: 40px;
+}
+
 .funktioner-rutnät {
 visning: rutnät;
-grid-mall-kolumner: repeat(3, 15fr);
+grid-mall-kolumner: repeat(3, 1fr);
 mellanrum: 20px;
-marginal-topp: 20px;
-textjustering: vänster;
-}
-
-@media(maxbredd: 768px) {
-.funktioner-rutnät {
-grid-mall-kolumner: 1fr;
-}
 }
 
 .feature-box {
-bakgrund: #0c1520;
-utfyllnad: 25px;
-kantradius: 16px;
-kantlinje: 1px heldragen #1e293b;
+bakgrund: var(--bg-kort);
+border: 1px solid var(--border);
+utfyllnad: 30px;
+kantradius: 20px;
+textjustering: vänster;
+övergång: alla 0,25s lätthet;
+}
+
+.feature-box:hover {
+kantfärg: var(--kantfärg-aktiv);
+bakgrund: var(--bg-card-hover);
+transformera: translateY(-2px);
+}
+
+.ikon-omslag {
+bredd: 42px;
+höjd: 42px;
+bakgrund: rgba(95, 245, 255, 0,06);
+kantlinje: 1px solid rgba(95, 245, 255, 0,15);
+kantradius: 10px;
+skärm: flex;
+justera-objekt: centrera;
+justify-content: centrera;
+marginal-nedre: 20px;
+färg: var(--accent);
 }
 
 .feature-box h3 {
-färg: #5ff5ff;
 fontstorlek: 1.1rem;
+teckenstorlek: 600;
+färg: var(--text-primär);
 marginal-nedre: 10px;
 }
 
 .feature-box p {
-färg: #94a3b8;
 teckenstorlek: 0,95 rem;
 radhöjd: 1,5;
+färg: var(--text-sekundär);
+}
+
+/* Sidfot och efterlevnad */
+sidfot
+bredd: 100 %;
+maxbredd: 1100px;
+border-top: 1px solid var(--border);
+utfyllnad: 30px 10px 10px 10px;
+marginal-topp: 80px;
+skärm: flex;
+flexriktning: kolumn;
+justera-objekt: centrera;
+mellanrum: 16px;
 }
 
 .footer-länkar {
-marginal-topp: 50px;
+skärm: flex;
+mellanrum: 24px;
 }
 
 .footer-länkar a {
-färg: #5ff5ff;
+färg: var(--text-sekundär);
 textdekoration: ingen;
-marginal: 0 12px;
-teckenstorlek: 0,95 rem;
-övergång: opacitet 0,2s;
+teckenstorlek: 0.9rem;
+övergång: färg 0,2s;
 }
 
 .footer-länkar a:hover {
-textdekoration: understrykning;
-opacitet: 0,9;
+färg: var(--accent);
 }
 
-.avdelare {
-färg: #334155;
+.upphovsrätt {
+teckenstorlek: 0.8rem;
+färg: var(--text-dämpad);
 }
 
-.sidfot {
-marginal-topp: 20px;
-teckenstorlek: 0,85 rem;
-färg: #64748b;
-}
-
-@media(maxbredd: 768px) {
-.hjälte-kort {
-utfyllnad: 35px 20px;
+/* Responsiv anpassning för mobiler */
+@media(maxbredd: 900px) {
+.funktioner-rutnät {
+grid-mall-kolumner: 1fr;
+mellanrum: 16px;
 }
 h1 {
-fontstorlek: 2rem;
+teckenstorlek: 2.2rem;
 }
 .beskrivning {
-fontstorlek: 1rem;
+fontstorlek: 1.1rem;
 }
-.inloggningsknapp {
-fontstorlek: 1rem;
-utfyllnad: 16px 28px;
-bredd: 100 %;
+rubrik {
+flexriktning: kolumn;
+mellanrum: 16px;
 }
 }
 </stil>
 </huvud>
 <kropp>
 
-<div class="behållare">
-<div class="hjältekort">
-<img src="logo.png" alt="Luca Hayes innehållsplattform" class="logo">
-<h1>Luca Hayes innehållsplattform</h1>
-<p class="subtitle">Nästa generationens TikTok-skaparhantering</p>
+<rubrik>
+<div class="varumärke">
+<img src="logo.png" alt="Plattformslogotyp" class="header-logo">
+<span class="brand-name">Luca Hayes-plattformen</span>
+</div>
+<div class="status-badge">
+<div class="status-dot"></div>
+<span>TikTok API Live Gateway</span>
+</div>
+</rubrik>
+
+<main class="huvudinnehåll">
+<h1>Det professionella navet för TikTok-skapare</h1>
 <p class="beskrivning">
-Ett avancerat företagsekosystem skräddarsytt för professionella kreatörer. Effektivisera ditt innehållsarbetsflöde, verifiera kontobehörighetsparametrar och hantera din mediepubliceringslivscykel säkert direkt via TikToks officiella öppna API-infrastruktur.
+Auktorisera och anslut din arbetsyta för skapare säkert. Validera behörighetsparametrar för kontopublicering och distribuera produktionstillgångar sömlöst via TikToks krypterade gränssnitt.
 </p>
 
 https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes
-<img class="tiktok-ikon" src=" https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png " alt="TikTok" laddar="ivrig">
-<span>Anslut till TikTok-skaparkonto</span>
+<img class="tiktok-icon" src=" https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png " alt="TikTok">
+<span>Anslut skaparidentitet</span>
 </a>
 
-<div class="säkerhetsanmärkning">
-🔒 Säker, krypterad autentisering som drivs helt av TikTok OAuth 2.0.
+<div class="säkerhetstext">
+🔒 Säker serverlös handskakning via TikTok OAuth 2.0. Inga inloggningsuppgifter lagras.
 </div>
-</div>
+</main>
 
+<div class="funktionsbehållare">
 <div class="funktionsrutnät">
 <div class="funktionsruta">
-<h3>Automatisk verifiering</h3>
-<p>Hämta och granska skaparparametrar på serversidan direkt och säkert, inklusive publiceringsgränser, tidsbegränsningar och konfigurationer för smeknamnsidentitet.</p>
+<div class="ikonomslag">
+<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
 </div>
-<div class="funktionsruta">
-<h3>Verktyg för policyefterlevnad</h3>
-<p>Inbyggda brytare för kommersiellt innehållsavslöjande för varumärkes- och marknadsföringsinnehåll för att säkerställa felfri efterlevnad av juridiska ramar.</p>
+<h3>Identitetsarkitektur</h3>
+<p>Direkt handskakningsintegration läser officiella smeknamnsprofiler och interna auktoriseringsstatustokens direkt och tydligt.</p>
 </div>
+
 <div class="funktionsruta">
-<h3>Säker livscykelavsökning</h3>
-<p>Spåra ditt innehållsutskick säkert i realtid. Transparenta indikatorer för bearbetningsstatus förhindrar oavsiktlig dubbelpublicering eller fel.</p>
+<div class="ikonomslag">
+<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0x"/></svg>
+</div>
+<h3>Parameterutvärdering</h3>
+<p>Validerar strikta mediespecifikationer, tillåtna klipplängder och hastighetsbegränsningar för publicering innan objekt skickas.</p>
+</div>
+
+<div class="funktionsruta">
+<div class="ikonomslag">
+<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.003 5.003 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+</div>
+<h3>Efterlevnadsskydd</h3>
+<p>Dedikerade verktyg för kommersiella upplysningar säkerställer tydlig åtskillnad mellan betalda partnerskap och reklammaterial.</p>
+</div>
+
 </div>
 </div>
 
+<sidfot>
 <div class="sidfot-länkar">
 <a href="privacy-policy.html">Integritetspolicy</a>
-<span class="divider">|</span>
 <a href="terms-of-service.html">Användarvillkor</a>
 </div>
-
-<div class="sidfot">
-© 2026 Luca Hayes Content Platform. Alla rättigheter förbehållna. Byggd i strikt enlighet med TikTok Open Platform Developer Terms.
+<div class="upphovsrätt">
+© 2026 Luca Hayes innehållsplattform. Utvecklad i enlighet med TikToks öppna plattformsekosystemstandarder.
 </div>
-</div>
+</sidfot>
 
 </body>
 </html>
+
