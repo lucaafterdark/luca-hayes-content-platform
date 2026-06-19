@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luca Hayes Content Platform</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#05070A;
+color:#FFFFFF;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.container{
+max-width:850px;
+width:100%;
+text-align:center;
+padding:40px 20px;
+}
+
+.logo{
+width:160px;
+max-width:80%;
+margin-bottom:20px;
+}
+
+h1{
+font-size:2.1rem;
+font-weight:700;
+color:#9EEBFF;
+margin-bottom:18px;
+}
+
+.description{
+max-width:700px;
+margin:0 auto 35px auto;
+font-size:1.05rem;
+line-height:1.7;
+color:#D7E4EC;
+}
+
+.login-button{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+
+background:#FFFFFF;
+color:#111111;
+
+padding:16px 30px;
+
+border-radius:12px;
+
+font-size:1.1rem;
+font-weight:700;
+
+text-decoration:none;
+
+transition:.25s ease;
+
+box-shadow:
+0 0 10px rgba(0,168,255,.15);
+
+}
+
+.login-button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 18px rgba(0,168,255,.25);
+
+}
+
+.tiktok-icon{
+width:32px;
+height:32px;
+}
+
+.note{
+margin-top:16px;
+font-size:.9rem;
+color:#9BAAB5;
+}
+
+.footer-links{
+margin-top:40px;
+}
+
+.footer-links a{
+color:#8FE9FF;
+text-decoration:none;
+margin:0 10px;
+font-size:.95rem;
+}
+
+.footer-links a:hover{
+text-decoration:underline;
+}
+
+.footer{
+margin-top:30px;
+font-size:.85rem;
+color:#72808C;
+}
+
+@media(max-width:768px){
+
+.logo{
+width:130px;
+}
+
+h1{
+font-size:1.8rem;
+}
+
+.description{
+font-size:1rem;
+}
+
+.login-button{
+font-size:1rem;
+padding:14px 24px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img
+src="logo.png"
+alt="Luca Hayes Content Platform"
+class="logo">
+
+<h1>Luca Hayes Content Platform</h1>
+
+<p class="description">
+Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
+</p>
+
+<a
+class="login-button"
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes">
+
+<img
+class="tiktok-icon"
+src="https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png"
+alt="TikTok"
+loading="eager">
+
+<span>Connect with TikTok</span>
+
+</a>
+
+<div class="note">
+Secure authentication powered by TikTok OAuth
+</div>
+
+<div class="footer-links">
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+|
+
+<a href="terms-of-service.html">
+Terms of Service
+</a>
+
+</div>
+
+<div class="footer">
+© 2025 Luca Hayes Content Platform
+</div>
+
+</div>
+
+</body>
+</html>
