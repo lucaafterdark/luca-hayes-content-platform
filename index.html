@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,139 +17,119 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:#05070A;
 color:#FFFFFF;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
 }
 
-.container{
-max-width:850px;
-width:100%;
+.hero{
+max-width:1100px;
+margin:auto;
+padding:90px 25px;
 text-align:center;
-padding:40px 20px;
 }
 
 .logo{
-width:160px;
-max-width:80%;
-margin-bottom:20px;
+width:180px;
+margin-bottom:25px;
 }
 
 h1{
-font-size:2.1rem;
-font-weight:700;
+font-size:3rem;
 color:#9EEBFF;
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
-.description{
-max-width:700px;
-margin:0 auto 35px auto;
-font-size:1.05rem;
-line-height:1.7;
+.subtitle{
+max-width:850px;
+margin:auto;
+font-size:1.15rem;
+line-height:1.8;
 color:#D7E4EC;
 }
 
-.login-button{
-
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:14px;
-
+.launch-btn{
+display:inline-block;
+margin-top:40px;
+padding:18px 36px;
 background:#FFFFFF;
 color:#111111;
-
-padding:16px 30px;
-
-border-radius:12px;
-
-font-size:1.1rem;
-font-weight:700;
-
 text-decoration:none;
-
+font-weight:700;
+border-radius:12px;
+font-size:1.1rem;
 transition:.25s ease;
-
-box-shadow:
-0 0 10px rgba(0,168,255,.15);
-
 }
 
-.login-button:hover{
-
+.launch-btn:hover{
 transform:translateY(-2px);
-
-box-shadow:
-0 0 18px rgba(0,168,255,.25);
-
 }
 
-.tiktok-icon{
-width:32px;
-height:32px;
+.section{
+max-width:1100px;
+margin:auto;
+padding:70px 25px;
 }
 
-.note{
-margin-top:16px;
-font-size:.9rem;
-color:#9BAAB5;
+.section-title{
+text-align:center;
+color:#9EEBFF;
+font-size:2rem;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0D131B;
+padding:25px;
+border-radius:18px;
+}
+
+.card h3{
+color:#9EEBFF;
+margin-bottom:15px;
+}
+
+.card p{
+color:#D7E4EC;
+line-height:1.7;
+}
+
+.footer{
+text-align:center;
+padding:60px 20px;
 }
 
 .footer-links{
-margin-top:40px;
+margin-bottom:20px;
 }
 
 .footer-links a{
 color:#8FE9FF;
 text-decoration:none;
 margin:0 10px;
-font-size:.95rem;
 }
 
 .footer-links a:hover{
 text-decoration:underline;
 }
 
-.footer{
-margin-top:30px;
-font-size:.85rem;
+.copyright{
 color:#72808C;
-}
-
-@media(max-width:768px){
-
-.logo{
-width:130px;
-}
-
-h1{
-font-size:1.8rem;
-}
-
-.description{
-font-size:1rem;
-}
-
-.login-button{
-font-size:1rem;
-padding:14px 24px;
-}
-
+font-size:.9rem;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
 
 <img
 src="logo.png"
@@ -159,27 +138,74 @@ class="logo">
 
 <h1>Luca Hayes Content Platform</h1>
 
-<p class="description">
-Connect your TikTok account to securely upload and publish content through the Luca Hayes Content Platform.
+<p class="subtitle">
+A creator productivity platform designed to help TikTok creators securely connect their accounts, manage content workflows, preview uploads, configure publishing settings and prepare content for publishing through TikTok integrations.
 </p>
 
-<a
-class="login-button"
-href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawkfha8w3e7a44d3&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://lucaafterdark.github.io/luca-hayes-content-platform/redirect&state=lucahayes">
-
-<img
-class="tiktok-icon"
-src="https://lf16-tt4d.tiktokcdn.com/obj/tiktok-open-platform/tt_icon.png"
-alt="TikTok"
-loading="eager">
-
-<span>Connect with TikTok</span>
-
+<a href="login.html" class="launch-btn">
+Launch Platform
 </a>
 
-<div class="note">
-Secure authentication powered by TikTok OAuth
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Platform Features
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Secure TikTok Authentication</h3>
+<p>
+Creators connect their TikTok accounts through TikTok Login Kit using TikTok's official authorization flow.
+</p>
 </div>
+
+<div class="card">
+<h3>Creator Information</h3>
+<p>
+The platform retrieves creator account information after authentication to identify the connected TikTok account.
+</p>
+</div>
+
+<div class="card">
+<h3>Video Upload Workflow</h3>
+<p>
+Creators can upload video content, preview files and configure publishing settings before submission.
+</p>
+</div>
+
+<div class="card">
+<h3>Publishing Preparation</h3>
+<p>
+Users can prepare content, review privacy settings and configure publishing options before initiating a publishing request.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+About The Platform
+</h2>
+
+<div class="card">
+
+<p>
+Luca Hayes Content Platform is a web-based creator tool built to support content management and publishing workflows for TikTok creators.
+The platform integrates with TikTok Login Kit and TikTok APIs to provide secure account authentication and creator functionality.
+</p>
+
+</div>
+
+</section>
+
+<div class="footer">
 
 <div class="footer-links">
 
@@ -195,7 +221,7 @@ Terms of Service
 
 </div>
 
-<div class="footer">
+<div class="copyright">
 © 2025 Luca Hayes Content Platform
 </div>
 
